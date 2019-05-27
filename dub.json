@@ -1,9 +1,13 @@
 {
-	"authors": [
-		"uiman"
-	],
-	"copyright": "Copyright © 2019, uiman",
-	"description": "A minimal D application.",
-	"license": "proprietary",
-	"name": "uim-react"
+	"name": "uim-react",
+	"authors": [ "UI Manufaktur" ],
+	"description": "D library for working withReact.js",
+	"copyright": "Copyright © 2019, UI Manufaktur UG",
+	"license": "Apache 2.0",
+    "targetType": "library",
+	"dependencies": {
+		"vibe-d:data": "==0.8.5",
+		"uim-core": "~>0.19.5",
+		"uim-oop": "~>0.19.5"
+	}
 }
