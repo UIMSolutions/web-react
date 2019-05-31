@@ -1,7 +1,7 @@
 {
 	"name": "uim-react",
 	"authors": [ "UI Manufaktur" ],
-	"description": "D library for working withReact.js",
+	"description": "D library for ReactJs projects",
 	"copyright": "Copyright © 2019, UI Manufaktur UG",
 	"license": "Apache 2.0",
     "targetType": "library",

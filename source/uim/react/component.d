@@ -1,5 +1,6 @@
 module uim.react.component;
 
+/* React components as ES6 classes */
 class DReactComponent  {
     this() {}
     this(string aName) {this(); _name = aName; }
@@ -13,19 +14,23 @@ class DReactComponent  {
     @property O render(this O)(string newRender) { _render = newRender; return cast(O)this; }    
     @property string render() { return _render; }    
 
+	  bool opEquals(string txt) { return toString == txt; }
+
     override string toString() {
-        return "
-class "~_name~" extends React.Component {
-  render() {
-    return ("~render~");
-  }
-}";
+        return "class "~_name~" extends React.Component{render(){return("~render~")}}";
     }
 }
 auto ReactComponent() { return new DReactComponent; }
 auto ReactComponent(string aName) { return new DReactComponent(aName); }
 auto ReactComponent(string aName, string someRender) { return new DReactComponent(aName, someRender); }
 
-unittest {
+/* Alternative way to create React Components using functions */
+auto reactComponent(string name, string render) {
+  return "function "~name~"() { return "~render~"; }";  
+}
 
+
+unittest {
+  assert(ReactComponent("test") == "class test extends React.Component{render(){return()}}");
+  assert(ReactComponent("test", "content") == "class test extends React.Component{render(content){return()}}");
 }
