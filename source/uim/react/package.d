@@ -14,6 +14,7 @@ public import uim.json;
 
 public import uim.react.component;
 public import uim.react.dom;
+public import uim.react.apps;
 
 string reactCreateElement(string tag, string[string] props = null, string[] childs = null) {
 	auto result = "React.createElement("~tag;
