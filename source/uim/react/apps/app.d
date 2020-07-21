@@ -8,14 +8,14 @@ class DReactApp : DH5App {
 	this(string aName, string aRootPath) { super(aName, aRootPath); }
 	this(string aName, string aRootPath, string[string] someParameters) { super(aName, aRootPath, parameters); }
 
-  void init() {
+  override void init() {
     this.libraries(
       ["src":"/lib/react/last/react.production.min.js"], 
       ["src":"/lib/react-dom/last/react-dom.production.min.js"]);
   }
 
-  O render(this O) {
-    
+  O render(this O)() {
+    return cast(O)this;
   }
 }
 auto ReactApp() { super(); }
