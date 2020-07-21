@@ -6,7 +6,7 @@ class DReactApp : DH5App {
 	this() { super(); }
 	this(string aName) { super(aName); }
 	this(string aName, string aRootPath) { super(aName, aRootPath); }
-	this(string aName, string aRootPath, string[string] someParameters) { super(aName, aRootPath, parameters); }
+// 	this(string aName, string aRootPath, string[string] someParameters) { super(aName, aRootPath, parameters); }
 
   override void init() {
     this.libraries(
@@ -18,7 +18,11 @@ class DReactApp : DH5App {
     return cast(O)this;
   }
 }
-auto ReactApp() { super(); }
-auto ReactApp(string aName) { super(aName); }
-auto ReactApp(string aName, string aRootPath) { super(aName, aRootPath); }
-auto ReactApp(string aName, string aRootPath, string[string] someParameters) { super(aName, aRootPath, parameters); }
+auto ReactApp() { return new DReactApp; }
+auto ReactApp(string aName) { return new DReactApp(aName); }
+auto ReactApp(string aName, string aRootPath) { return new DReactApp(aName, aRootPath); }
+// auto ReactApp(string aName, string aRootPath, string[string] someParameters) { super(aName, aRootPath, parameters); }
+
+unittest {
+  writeln(ReactApp);
+}
