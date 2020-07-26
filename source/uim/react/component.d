@@ -70,11 +70,3 @@ class DJSClass : DJSRoot {
 		/
 } */
 
-string reactComponent(string className, DH5Obj h5) {
-	return "class %s extends React.Component{render(){return %s;}}".format(className, h5.toReact);
-}
-unittest {
-	writeln(reactComponent("Test", H5H1("Message")));
-}
-
-React.createElement('div', { className: 'some-css-class' }, 'Some content')

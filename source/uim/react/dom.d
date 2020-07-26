@@ -3,9 +3,6 @@ module uim.react.dom;
 import uim.react;
 
 
-auto toReact(DH5Obj obj) {
-  return "React.DOM.%s(%s,%s)".format(obj.tag, obj.attributes.toJS, obj.content);
-}
 
 /*
 string toReact(DH5Obj h5) {
