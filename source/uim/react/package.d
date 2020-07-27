@@ -14,6 +14,7 @@ public import uim.json;
 
 // packages
 public import uim.react.apps;
+public import uim.react.classes;
 public import uim.react.functions;
 
 // modules
@@ -60,3 +61,8 @@ string toJSX(DH5Obj h5) {
 	return "<%s>%s</%s>".format(tag, children, tag);
 }
 
+string toString(DReactComponent[] components) {
+	string result;
+	foreach(c; components) result ~= c.toString;
+	return result;
+} 
