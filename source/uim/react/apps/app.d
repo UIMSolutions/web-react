@@ -9,22 +9,20 @@ class DReactApp : DH5App {
 // 	this(string aName, string aRootPath, string[string] someParameters) { super(aName, aRootPath, parameters); }
 
   override void init() {
-    this.libraries(
+    this
+    .libraries(
       ["src":"/lib/react/last/react.production.min.js"], 
-      ["src":"/lib/react-dom/last/react-dom.prod(uction.min.js"]);
-  }
-
-  bool _jsxMode;
-  @safe bool jsxMode() { return _jsxMode; }
-  @safe O jsxMode(this O)(bool newMode) { _jsxMode = newMode; return cast(O)this; }
-  unittest {
-    assert(!ReactApp.jsxMode);
-    assert(ReactApp.jsxMode(true).jsxMode);
+      ["src":"/lib/react-dom/last/react-dom.production.min.js"])
+    .layout(ReactLayout);
   }
 
   DReactComponent[] _components;
   O components(this O)(DReactComponent[] addComponents...) { this.components(addComponents); return cast(O)this; }
   O components(this O)(DReactComponent[] addComponents) { _components ~= addComponents; return cast(O)this; }
+
+  O render(this O)() {
+    return cast(O)this;
+  }
 
   override string toString() {
     string result;

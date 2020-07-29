@@ -31,6 +31,7 @@ import uim.react;
 
 		auto finalLang = parameters.get("lang", this.lang); // if lang !in parameters use this.lang
 		auto finalTitle = parameters.get("title", this.title);  // if title !in parameters use this.title
+		if (content.length == 0) content = `<div id="app"></div>`;
 
 		// creating HTML page
 		auto result = H5Html

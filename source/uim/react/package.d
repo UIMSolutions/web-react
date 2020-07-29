@@ -41,7 +41,6 @@ unittest {
 }
 
 
-
 string toString(DReactComponent[] components) {
 	string result;
 	foreach(c; components) result ~= c.toString;
