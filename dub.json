@@ -1,13 +1,29 @@
 {
-	"name": "uim-react",
-	"authors": [ "UI Manufaktur" ],
-	"description": "D library for ReactJs projects",
-	"copyright": "Copyright © 2019, UI Manufaktur UG",
-	"license": "Apache 2.0",
+    "name": "uim-react",
+    "authors": ["UI Manufaktur Team"],
+    "description": "D library for ReactJs projects",
+    "copyright": "Copyright © 2017-2020, UI Manufaktur UG",
+    "license": "MIT",
     "targetType": "library",
-	"dependencies": {
-		"vibe-d:data": "==0.8.5",
-		"uim-core": "~>0.19.5",
-		"uim-oop": "~>0.19.5"
-	}
+    "dependencies": {
+        "vibe-d": "~>0.9.0-rc.1"
+    },
+    "sourcePaths": [
+        "../uim-core",
+        "../uim-oop",
+        "../uim-json",
+        "../uim-html",
+        "../uim-css",
+        "../uim-javascript",
+        "./"
+    ],
+    "importPaths": [
+        "../uim-core",
+        "../uim-oop",
+        "../uim-json",
+        "../uim-html",
+        "../uim-css",
+        "../uim-javascript",
+        "./"
+    ]
 }

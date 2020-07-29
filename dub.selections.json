@@ -1,9 +1,17 @@
 {
 	"fileVersion": 1,
 	"versions": {
+		"botan": "1.12.18",
+		"botan-math": "1.0.3",
+		"diet-ng": "1.7.2",
+		"eventcore": "0.9.6",
+		"libasync": "0.8.6",
+		"memutils": "1.0.4",
+		"mir-linux-kernel": "1.0.1",
+		"openssl": "1.1.6+1.0.1g",
 		"stdx-allocator": "2.77.5",
-		"uim-core": "0.19.51",
-		"uim-oop": "0.19.5",
-		"vibe-d": "0.8.5"
+		"taggedalgebraic": "0.11.16",
+		"vibe-core": "1.9.2",
+		"vibe-d": "0.9.0-rc.1"
 	}
 }
