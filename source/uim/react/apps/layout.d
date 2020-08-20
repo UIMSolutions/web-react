@@ -10,10 +10,12 @@ import uim.react;
 	override string toString() { return toString("", null); }
 	override string toString(DH5AppPage page, string[string] parameters = null) {
 		super.toString(page, parameters);
+		string[string] toStringParameters;
+
 		if (auto rtPage = cast(DReactPage)page) {
 			if (rtPage.components) {
-				if ("components" in parameters) parameters["components"] = rtPage.components.toString~parameters["components"];
-				else parameters["components"] = rtPage.components.toString;
+				if ("components" in parameters) parameters["components"] = rtPage.components.toString(toStringParameters)~parameters["components"];
+				else parameters["components"] = rtPage.components.toString(toStringParameters);
 			}
 		}
 		return toString(page.content, parameters);
@@ -21,10 +23,11 @@ import uim.react;
 
 	override string toString(string content, string[string] parameters = null) {
 		super.toString(content, parameters);
+		string[string] toStringParameters;
 		if (auto rtApp = cast(DReactApp)this.app) {
 			if (rtApp.components) {
-				if ("components" in parameters) parameters["components"] = rtApp.components.toString~parameters["components"];
-				else parameters["components"] = rtApp.components.toString;
+				if ("components" in parameters) parameters["components"] = rtApp.components.toString(toStringParameters)~parameters["components"];
+				else parameters["components"] = rtApp.components.toString(toStringParameters);
 			}
 		}
 		debug writeln(parameters);

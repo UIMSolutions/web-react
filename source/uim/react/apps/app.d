@@ -25,6 +25,10 @@ class DReactApp : DH5App {
   }
 
   override string toString() {
+    string[string] additionalParameters;
+    return toString(additionalParameters);
+  }
+  string toString(string[string] additionalParameters) {
     string result;
 
     foreach (component; _components) { result ~= component.toString; }
