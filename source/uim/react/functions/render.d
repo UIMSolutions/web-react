@@ -1,5 +1,6 @@
 module uim.react.functions.render;
 
+@safe:
 import uim.react;
 
 string toJSX(DH5Obj h5) {

@@ -1,5 +1,7 @@
 module uim.react.apps.app;
 
+@safe:
+@safe:
 import uim.react;
 
 class DReactApp : DH5App {
@@ -8,13 +10,13 @@ class DReactApp : DH5App {
 	this(string aName, string aRootPath) { super(aName, aRootPath); this.layout(ReactLayout); }
 // 	this(string aName, string aRootPath, string[string] someParameters) { super(aName, aRootPath, parameters); }
 
-  override void init() {
+/*   override void init() {
     this
-    .libraries(
+    .scripts(
       ["src":"/lib/react/last/react.production.min.js"], 
       ["src":"/lib/react-dom/last/react-dom.production.min.js"])
     .layout(ReactLayout);
-  }
+  } */
 
   DReactComponent[] _components;
   O components(this O)(DReactComponent[] addComponents...) { this.components(addComponents); return cast(O)this; }

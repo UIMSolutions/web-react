@@ -1,5 +1,6 @@
 module uim.react.functions.components;
 
+@safe:
 import uim.react;
 
 string rtComponent(string className, DH5Obj h5) {

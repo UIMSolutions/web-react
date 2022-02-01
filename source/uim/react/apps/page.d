@@ -1,5 +1,6 @@
 module uim.react.apps.page;
 
+@safe:
 import uim.react;
 
 class DReactPage : DH5AppPage {

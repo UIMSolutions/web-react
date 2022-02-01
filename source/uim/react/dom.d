@@ -1,5 +1,6 @@
 module uim.react.dom;
 
+@safe:
 import uim.react;
 
 

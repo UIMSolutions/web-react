@@ -1,5 +1,6 @@
 module uim.react.classes.component;
 
+@safe:
 import uim.react;
 
 class DReactComponent {

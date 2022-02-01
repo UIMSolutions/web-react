@@ -1,5 +1,6 @@
 module uim.react.functions.base;
 
+@safe:
 import uim.react;
 
 string rtCreateElement(string content) {

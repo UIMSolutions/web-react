@@ -1,5 +1,6 @@
 module uim.react.component;
 
+@safe:
 import uim.react;
 
 /* /// A javascript Class (ECMAScript 2015)	

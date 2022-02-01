@@ -1,5 +1,6 @@
 module uim.react.functions.dom;
 
+@safe:
 import uim.react;
 
 auto rtDOMRender(string target, string content) {

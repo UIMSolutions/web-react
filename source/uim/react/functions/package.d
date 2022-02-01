@@ -1,5 +1,6 @@
 module uim.react.functions;
 
+@safe:
 import uim.react;
 
 public import uim.react.functions.base;

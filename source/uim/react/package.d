@@ -1,5 +1,7 @@
 module uim.react;
 
+@safe:
+
 public import std.stdio;
 public import std.uuid;
 
